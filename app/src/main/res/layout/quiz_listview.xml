@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:padding="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            android:text="World test 1"
+            android:id="@+id/title_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:padding="2dp"
+                    android:background="@drawable/answer_circle_design"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                   android:id="@+id/question_details_id"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                    android:src="@drawable/ic_baseline_help_outline_24"
+                />
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/text_black"
+                android:text="10 Ques"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/text_ques_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:padding="2dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_access_time_24"
+                    android:id="@+id/time_taken_img"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/answer_circle_design"
+                    />
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/text_black"
+                    android:text="5 Minute"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/time_taken_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <Button
+                    android:textAlignment="center"
+                    android:paddingHorizontal="10dp"
+                    android:background="@drawable/button_design"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:text="START NOW"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/start_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:background="@drawable/answer_circle_design"
+            android:theme="@style/App.ToolbarStyle"
+            android:src="@drawable/ic_baseline_supervised_user_circle_24"
+            android:id="@+id/user_img_id"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            />
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:textColor="#4F0B132B"
+            android:textSize="12sp"
+            android:text="20 people took this quiz"
+            android:id="@+id/subtitle_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/price_id"
+            android:paddingVertical="5dp"
+            android:textAlignment="center"
+            android:background="@drawable/price_design_button"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/light_purple"
+            android:text="Free"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

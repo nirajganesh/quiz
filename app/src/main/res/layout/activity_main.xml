@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/applayoutid"
+        app:elevation="0dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_color"
+            android:theme="@style/App.ToolbarStyle"
+            app:titleTextColor="@color/main_color" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_above="@id/navigationmenuid"
+            android:layout_below="@id/applayoutid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+<!--                <com.smarteist.autoimageslider.SliderLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="250dp"-->
+<!--                    android:id="@+id/imageSlider1">-->
+
+                    <RelativeLayout
+                        android:id="@+id/top_relative_id1"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="@drawable/banner_image"
+                        >
+
+                        <ImageView
+                            android:alpha="0.1"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="#fff" />
+
+                    </RelativeLayout>
+
+<!--                </com.smarteist.autoimageslider.SliderLayout>-->
+
+                <LinearLayout
+                    android:layout_marginTop="70dp"
+                    android:id="@+id/linear_id"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/top_relative_id1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <View
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/black"
+                        android:id="@+id/left_view"
+                        android:layout_width="28dp"
+                        android:layout_height="3dp"
+                        />
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:text="Categories"
+                        android:id="@+id/text_id1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <View
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/black"
+                        android:id="@+id/right_view"
+                        android:layout_width="28dp"
+                        android:layout_height="3dp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:fontFamily="@font/poppins_medium"
+                    android:alpha="0.4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/linear_id"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:text="Start your quiz by selecting any category"
+                    android:id="@+id/text_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <RelativeLayout
+                    android:id="@+id/top_relative_id"
+                    android:layout_below="@id/text_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:shimmer_repeat_mode="restart"
+                        app:shimmer_shape="radial">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <include layout="@layout/shimmer_categories"></include>
+
+                            <include layout="@layout/shimmer_categories"></include>
+
+                            <include layout="@layout/shimmer_categories"></include>
+
+                            <include layout="@layout/shimmer_categories"></include>
+
+                            <include layout="@layout/shimmer_categories"></include>
+
+
+                        </LinearLayout>
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/recyclerviewid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </RelativeLayout>
+                <Button
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="20dp"
+                    android:text="SEE ALL"
+                    android:background="@drawable/button_design"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/top_relative_id"
+                    android:id="@+id/quiz_btn_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    />
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:background="@color/main_color"
+        android:alpha="0.8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/color"
+        app:itemTextColor="@color/color"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/navigationmenuid"
+        app:itemIconPadding="10dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="labeled"
+        />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

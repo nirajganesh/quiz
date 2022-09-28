@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ResultActivity">
+
+    <ImageView
+        android:id="@+id/image_id"
+        android:scaleType="center"
+        android:background="@drawable/result_image"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        />
+    <RelativeLayout
+        android:layout_marginVertical="10dp"
+        android:layout_below="@id/image_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <View
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/view_id_left"
+            android:layout_toLeftOf="@id/login_text"
+            android:background="@color/text_black"
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            />
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/login_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#333"
+            android:text="Result"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <View
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/view_id"
+            android:layout_toRightOf="@id/login_text"
+            android:background="@color/text_black"
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="5dp"
+            android:id="@+id/card_id"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="25dp"
+            android:layout_below="@id/login_text"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="110dp"
+            >
+
+            <RelativeLayout
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:id="@+id/left_layout"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="100dp"
+                    >
+                    <TextView
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_gravity="left"
+                        android:textSize="14sp"
+                        android:textColor="@color/textColorSecondary"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Total Attempt:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_gravity="left"
+                        android:textSize="14sp"
+                        android:textColor="@color/textColorSecondary"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Total Question:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:id="@+id/correct_answer_id"
+                        android:layout_marginVertical="3dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/textColorSecondary"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Correct ans."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+
+                    <TextView
+                        android:layout_marginHorizontal="20dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/textColorSecondary"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Wrong ans:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_toRightOf="@id/left_layout"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="150dp"
+                    >
+                    <TextView
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_gravity="start"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorSecondary"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="2"
+                        android:id="@+id/attemp_id_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_gravity="start"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorSecondary"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="20"
+                        android:id="@+id/total_que_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_gravity="start"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorSecondary"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="20"
+                        android:id="@+id/currect_ans_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_gravity="start"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorSecondary"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="10"
+                        android:id="@+id/wrong_ans_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:layout_below="@id/card_id"
+            android:fontFamily="@font/poppins_medium"
+            android:id="@+id/new_quiz_id"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:text="START A NEW QUIZ"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:background="@drawable/button_design"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            />
+
+        <Button
+            android:visibility="invisible"
+            android:layout_below="@id/new_quiz_id"
+            android:fontFamily="@font/poppins_medium"
+            android:id="@+id/changeid"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:text="SOLUTION"
+            android:textSize="14sp"
+            android:textColor="@color/button_color"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:background="@drawable/secondarybutton_design"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
